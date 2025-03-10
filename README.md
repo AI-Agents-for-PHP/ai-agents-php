@@ -1,20 +1,4 @@
-Here is the translated documentation:
-
-```markdown
-# Table of Contents
-- [🔧 Setup](#-setup)
-- [👨‍💻 Usage](#-usage)
-  - [In Console/Testing](#in-consoletesting)
-  - [In Code](#in-code)
-- [🤖 Creating a new agent](#-creating-a-new-agent)
-  - [Defining an agent function](#defining-an-agent-function)
-- [🧰 Agent Traits](#-agent-traits)
-- [📝 Chat Models](#-chat-models)
-  - [Currently Supported](#currently-supported)
-  - [Adding a new chat model](#adding-a-new-chat-model)
-- [❤️ Contributing](#️-contributing)
-
-## 🔧 Setup
+# 🔧 Setup
 
 ### Prerequisites
 
@@ -36,11 +20,15 @@ AZURE_OPENAI_API_VERSION="2023-09-01-preview"
 AZURE_OPENAI_DOMAIN="mydomain"
 AZURE_OPENAI_DEPLOYMENT="deployment_name"
 
+OPENAI_API_KEY="sk-abcdefg"
+
 OPEN_WEATHER_MAP_API_KEY="asdfjkl"
 
 TWILIO_ACCOUNT_SID="asdf"
 TWILIO_AUTH_TOKEN="asdf"
 TWILIO_PHONE_NUMBER="+12345678901"
+
+
 ```
 
 ### Installation
