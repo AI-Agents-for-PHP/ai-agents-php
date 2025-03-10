@@ -1,0 +1,8 @@
+vendor
+*.code-workspace
+/.vscode
+.env
+.idea
+docker-compose.yaml
+Dockerfile
+index.php
