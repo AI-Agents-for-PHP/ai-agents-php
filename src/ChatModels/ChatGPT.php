@@ -23,8 +23,10 @@ class ChatGPT extends AbstractChatModel
      */
     public function __construct($context = [], $prePrompt = "", $functions = [], $model = 'gpt-4',  $openAiOptions = [])
     {
+
         parent::__construct($context, $prePrompt, $functions);
-        $this->model = $model;
+
+        $this->model = empty($_ENV['OPENAI_MODEL']) ? $model : $_ENV['OPENAI_MODEL'];
         $this->client = OpenAI::client($_ENV['OPENAI_API_KEY']);
         $this->context = $context;
         $this->openAiOptions = $openAiOptions;

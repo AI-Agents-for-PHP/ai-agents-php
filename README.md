@@ -13,20 +13,9 @@ composer require vlucas/phpdotenv
 In the root of your project, create a file named `.env` with the following variables:
 
 ```dotenv
-ANTHROPIC_KEY=xxx
-
-AZURE_OPENAI_KEY="mykey"
-AZURE_OPENAI_API_VERSION="2023-09-01-preview"
-AZURE_OPENAI_DOMAIN="mydomain"
-AZURE_OPENAI_DEPLOYMENT="deployment_name"
-
-OPENAI_API_KEY="sk-abcdefg"
-
-OPEN_WEATHER_MAP_API_KEY="asdfjkl"
-
-TWILIO_ACCOUNT_SID="asdf"
-TWILIO_AUTH_TOKEN="asdf"
-TWILIO_PHONE_NUMBER="+12345678901"
+OPENAI_API_KEY=""
+OPENAI_API_URL=""
+OPENAI_API_VERSION=""
 
 
 ```
@@ -42,29 +31,17 @@ composer require caiquebispo/ai-agents-php
 ### In Code
 
 ```php
-$chat = new \CaiqueBispo\AiAgentsPHP\ChatModels\ChatGPT();
-// or
-$chat = new \CaiqueBispo\AiAgentsPHP\ChatModels\AzureOpenAI();
-// or
-$chat = new \CaiqueBispo\AiAgentsPHP\ChatModels\AnthropicClaude();
 
-$agent = new \CaiqueBispo\AiAgentsPHP\Agents\TestingAgent($chat); // Ensures the agent receives a pre-prompt upon creation
+//Load the .env file
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+ 
+// Create a new chat model
+$chat = new \CaiqueBispo\AiAgentsPHP\ChatModels\ChatGPT();
+
+// Create a new agent
+$agent = new \CaiqueBispo\AiAgentsPHP\Agents\TestingAgent($chat);
 $agent->ask("Hello, is this working?"); // Yes, I am here. How can I help you today?
-$agent->lastCallMetadata;
-/*
-return $agent->lastCallMetadata;
-= [
-    "id" => "chatcmpl-8123ABC",
-    "created" => 1705545737,
-    "model" => "gpt-4",
-    "systemFingerprint" => "fp_l33t123",
-    "usage" => OpenAI\Responses\Chat\CreateResponseUsage {#5004
-      +promptTokens: 365,
-      +completionTokens: 17,
-      +totalTokens: 382,
-    },
-  ]
-*/
 ```
 
 ## 🤖 Creating a new agent
@@ -76,18 +53,13 @@ The `prePrompt` property is the pre-prompt that is passed to the chat model. Thi
 
 You can use traits in `AgentTraits` to add specific functionalities that you may need.
 
-For example, if you want your agent to be able to send text messages, you can add the `SMSTrait` to your agent class. The bot will automatically know that it can send text messages.
-
-This is an example of an agent that can send text messages, perform calculations, and get the weather forecast.
+This is an example of an agent that can send text messages, perform calculations.
 
 **This is the total code needed to create an agent.**
 ```php
 class TestingAgent extends BaseAgent {
 
-    use \CaiqueBispo\AiAgentsPHP\AgentTraits\SMSTrait; // Access to send SMS via Twilio
     use \CaiqueBispo\AiAgentsPHP\AgentTraits\MathTrait; // Access to math functions
-    use \CaiqueBispo\AiAgentsPHP\AgentTraits\DateTrait;  // Access to date functions
-    use \CaiqueBispo\AiAgentsPHP\AgentTraits\WeatherTrait; // Access to openweathermap API
 
     public string $prePrompt = "You are a helpful assistant";   // Pre-prompt
 }
@@ -123,8 +95,6 @@ It is highly recommended that you place reusable functions in a trait and then a
 ### Currently Supported
 - GPT-3.5-turbo
 - GPT-4
-- Azure OpenAI
-- Anthropic Claude
 
 ### Adding a new chat model
 New models can be added by extending the `AbstractChatModel` class. This class provides the basic functionality needed to interact with the chat model.

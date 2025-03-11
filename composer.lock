@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "759be57b4585ad08b564362f95b358d3",
+    "content-hash": "ce28881e0b81bb9604271aa24816d804",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -966,16 +966,16 @@
         },
         {
             "name": "twilio/sdk",
-            "version": "7.16.2",
+            "version": "8.3.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twilio/twilio-php.git",
-                "reference": "02ad214b0cc9fc513bd67df251d54aed8901284f"
+                "reference": "3113e8a672edf5e012120fa6fafc201e013c7ba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/02ad214b0cc9fc513bd67df251d54aed8901284f",
-                "reference": "02ad214b0cc9fc513bd67df251d54aed8901284f",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/3113e8a672edf5e012120fa6fafc201e013c7ba4",
+                "reference": "3113e8a672edf5e012120fa6fafc201e013c7ba4",
                 "shasum": ""
             },
             "require": {
@@ -1013,9 +1013,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twilio/twilio-php/issues",
-                "source": "https://github.com/twilio/twilio-php/tree/7.16.2"
+                "source": "https://github.com/twilio/twilio-php/tree/8.3.15"
             },
-            "time": "2024-04-01T10:34:42+00:00"
+            "time": "2025-02-20T14:18:17+00:00"
         },
         {
             "name": "yethee/tiktoken",

@@ -1,7 +1,7 @@
 {
     "name": "caiquebispo/ai-agents-php",
-    "description": "A package to build AI Agents on php",
-    "keywords": ["php","laravel", "ai", "chatgpt", "deepseek"],
+    "description": "A PHP library for building and managing AI agents with various chat models and functionalities.",
+    "keywords": ["php", "laravel", "ai", "chatgpt", "openai", "azure", "anthropic", "twilio", "weather", "agents"],
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.1",
         "openai-php/client": ">=0.8.0",
-        "twilio/sdk": "^7.5",
+        "twilio/sdk": "^8.3",
         "guzzlehttp/guzzle": "^7.8",
         "yethee/tiktoken": "^0.5.0"
     },
