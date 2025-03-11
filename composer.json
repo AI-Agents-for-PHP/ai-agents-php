@@ -1,6 +1,6 @@
 {
     "name": "caiquebispo/ai-agents-php",
-    "description": "A package to build AI Agents on top of Laravel",
+    "description": "A package to build AI Agents on php",
     "keywords": ["php","laravel", "ai", "chatgpt", "deepseek"],
     "type": "library",
     "license": "MIT",
