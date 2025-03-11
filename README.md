@@ -14,8 +14,7 @@ In the root of your project, create a file named `.env` with the following varia
 
 ```dotenv
 OPENAI_API_KEY=""
-OPENAI_API_URL=""
-OPENAI_API_VERSION=""
+OPENAI_MODEL=
 
 
 ```
