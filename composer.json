@@ -1,5 +1,5 @@
 {
-    "name": "adrenallen/ai-agents-laravel",
+    "name": "caiquebispo/ai-agents-php",
     "description": "A package to build AI Agents on top of Laravel",
     "keywords": ["php","laravel", "ai", "chatgpt", "deepseek"],
     "type": "library",
