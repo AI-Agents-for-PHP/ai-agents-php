@@ -6,3 +6,4 @@ vendor
 docker-compose.yaml
 Dockerfile
 index.php
+./src/Class
