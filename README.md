@@ -1,8 +1,12 @@
 # 🔧 Setup
 
+[![Latest Stable Version](http://poser.pugx.org/caiquebispo/ai-agents-php/v)](https://packagist.org/packages/caiquebispo/ai-agents-php) [![Total Downloads](http://poser.pugx.org/caiquebispo/ai-agents-php/downloads)](https://packagist.org/packages/caiquebispo/ai-agents-php) [![Latest Unstable Version](http://poser.pugx.org/caiquebispo/ai-agents-php/v/unstable)](https://packagist.org/packages/caiquebispo/ai-agents-php) [![License](http://poser.pugx.org/caiquebispo/ai-agents-php/license)](https://packagist.org/packages/caiquebispo/ai-agents-php) [![PHP Version Require](http://poser.pugx.org/caiquebispo/ai-agents-php/require/php)](https://packagist.org/packages/caiquebispo/ai-agents-php)
+
 ### Prerequisites
 
 Make sure you have the `phpdotenv` package installed. You can install it via Composer:
+
+In your laravel application you do not need to install the `vlucas/phpdotenv` package.
 
 ```bash
 composer require vlucas/phpdotenv
