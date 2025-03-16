@@ -7,7 +7,7 @@
 Install the package via Composer:
 
 ```bash
-composer require caiquebispo/ai-agents-php
+composer require caiquebispo/ai-agents-php:v0.2.0-beta
 ```
 
 ### Prerequisites
